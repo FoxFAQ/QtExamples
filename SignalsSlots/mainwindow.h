@@ -16,10 +16,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_horizontalSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;
+    void setValue(int value);
 };
 
 #endif // MAINWINDOW_H
