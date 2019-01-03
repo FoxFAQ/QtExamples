@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-01-03T13:52:40
+# Project created by QtCreator 2019-01-03T13:58:28
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = PushButton
+TARGET = SignalsSlots
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
