@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,11 +17,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_horizontalSlider_valueChanged(int value);
+    void on_actionNew_Window_triggered();
 
 private:
     Ui::MainWindow *ui;
-    void setValue(int value);
+    Dialog *myDialog;
 };
 
 #endif // MAINWINDOW_H
