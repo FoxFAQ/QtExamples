@@ -13,7 +13,12 @@ Dialog::~Dialog()
     delete ui;
 }
 
-void Dialog::on_pushButton_clicked()
+void Dialog::on_pushButton_2_clicked()
 {
     close();
+}
+
+void Dialog::on_pushButton_clicked()
+{
+    accept();
 }
