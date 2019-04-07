@@ -70,11 +70,13 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    writeDataStream("E:/delete.txt");
-    readDataStream("E:/delete.txt");
+    //writeDataStream("E:/delete.txt");
+    //readDataStream("E:/delete.txt");
 
-    writeTextStream("E:/delete2.txt");
-    readTextStream("E:/delete2.txt");
+    //writeTextStream("E:/delete2.txt");
+    //readTextStream("E:/delete2.txt");
+
+    readTextStream(":/files/QFile.pro");
 
     return a.exec();
 }

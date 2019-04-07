@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>QFile.pro.user</file>
+        <file>QFile.pro</file>
+    </qresource>
+</RCC>
