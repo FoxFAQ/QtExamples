@@ -74,4 +74,6 @@ void MainWindow::on_actionAdd_Child_triggered()
     QTreeWidgetItem *child = new QTreeWidgetItem;
     child->setText(0, "Child");
     ui->treeWidget->currentItem()->addChild(child);
+
+    ui->statusBar->showMessage("Child added", 1000);
 }
