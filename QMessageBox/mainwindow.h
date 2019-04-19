@@ -2,9 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QTreeWidget>
-#include <QTreeWidgetItem>
-#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -19,9 +16,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_treeWidget_itemClicked(QTreeWidgetItem *item, int column);
+    void on_pushButton_clicked();
 
-    void on_actionAdd_Child_triggered();
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;

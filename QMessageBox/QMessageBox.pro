@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-04-18T12:15:33
+# Project created by QtCreator 2019-04-19T19:00:06
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QTreeWidget
+TARGET = QMessageBox
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
