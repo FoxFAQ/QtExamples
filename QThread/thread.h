@@ -2,7 +2,7 @@
 #define THREAD_H
 
 #include <QThread>
-
+#include <QDebug>
 class thread : public QThread
 {
 public:

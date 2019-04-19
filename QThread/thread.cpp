@@ -1,5 +1,5 @@
 #include "thread.h"
-#include <QDebug>
+
 
 thread::thread()
 {

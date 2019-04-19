@@ -16,5 +16,8 @@ int main(int argc, char *argv[])
     thr2.start(QThread::LowestPriority);
     thr3.start(QThread::HighestPriority);
 
+    thr3.wait();
+    qDebug() << "Wait Test!";
+
     return a.exec();
 }
