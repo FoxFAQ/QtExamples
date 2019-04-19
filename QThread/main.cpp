@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
     thread thr3;
     thr3.name = "Thread 3 ";
 
-    thr1.start();
-    thr2.start();
-    thr3.start();
+    thr1.start(QThread::LowestPriority);
+    thr2.start(QThread::LowestPriority);
+    thr3.start(QThread::HighestPriority);
 
     return a.exec();
 }
