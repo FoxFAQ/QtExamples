@@ -21,6 +21,8 @@ public:
 private slots:
     void on_treeWidget_itemClicked(QTreeWidgetItem *item, int column);
 
+    void on_actionAdd_Child_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

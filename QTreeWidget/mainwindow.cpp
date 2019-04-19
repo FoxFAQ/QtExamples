@@ -68,3 +68,10 @@ void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column)
     if(item->childCount())
         qDebug() << "BELOW: " << item->child(0)->text(0) << item->child(0)->text(1) << item->child(0)->text(2);
 }
+
+void MainWindow::on_actionAdd_Child_triggered()
+{
+    QTreeWidgetItem *child = new QTreeWidgetItem;
+    child->setText(0, "Child");
+    ui->treeWidget->currentItem()->addChild(child);
+}
