@@ -2,13 +2,20 @@
 #define THREAD_H
 
 #include <QThread>
+#include <QMutex>
 #include <QDebug>
+
+static QMutex qMutex;
+static int NUMBER;
+
 class thread : public QThread
 {
 public:
     thread();
-    void run();
-    QString name;
+
+    QString name = "Thread";
+protected:
+    virtual void run();
 };
 
 #endif // THREAD_H
