@@ -7,6 +7,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    /*
+    Index lookup 1
+    Insertion n
+    Prepending Am1
+    Appending Am1
+    */
+
     QList<int> list;
     list << 1 << 2 << 3 << 4 << 5 << 6 << 7 << 8 << 9 << 10;
     qDebug() << list << list[0] << list.at(0);
@@ -30,6 +37,74 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     qDebug() << list;
 
+    /*
+    Index lookup n
+    Insertion 1
+    Prepending 1
+    Appending 1
+    */
+
+    QLinkedList<int> llist;
+    llist << 1 << 7 << 7 << 7;
+
+    foreach(int i, llist)
+        qDebug() << i;
+
+    /*
+    Index lookup 1
+    Insertion n
+    Prepending n
+    Appending Am1
+    */
+    QVector<int> vec[1024];
+
+    /*
+    Key lookup
+    Average log n
+    Worst case log n
+    Insertion
+    Average log n
+    Worst case log n
+    */
+    QMap<int, QString> idName;
+    /*
+    Key lookup
+    Average log n
+    Worst case log n
+    Insertion
+    Average log n
+    Worst case log n
+    */
+    QMultiMap<QString, int> nameId;
+
+    /*
+    Key lookup
+    Average Am1
+    Worst case n
+    Insertion
+    Average Am1
+    Worst case n
+    */
+    QHash<int, QString> idNameHash;
+    QMultiHash<QString, int> nameIdHash;
+
+    QStringList strList;
+    strList << "sun " << "is " << "shining!";
+    qDebug() << strList;
+    foreach(const QString &str, strList)
+        qDebug() << str;
+
+    /*
+    Key lookup
+    Average Am1
+    Worst case n
+    Insertion
+    Average Am1
+    Worst case n
+    */
+    QSet<QString> stringSet;
+    stringSet << "one" << "two" << "three";
+    qDebug() << stringSet;
 }
 
 MainWindow::~MainWindow()
