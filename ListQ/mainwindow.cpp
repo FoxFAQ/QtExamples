@@ -127,6 +127,9 @@ MainWindow::MainWindow(QWidget *parent) :
     std::copy(strList.begin() + 1, strList.end(), strVec.begin() + 1);
     foreach(const QString &str, strVec)
         qDebug() << str;
+
+    std::fill(strVec.begin(), strVec.end(), "FILLED!");
+    qDebug() << strVec;
 }
 
 MainWindow::~MainWindow()
