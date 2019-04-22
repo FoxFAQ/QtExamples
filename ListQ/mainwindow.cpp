@@ -130,6 +130,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     std::fill(strVec.begin(), strVec.end(), "FILLED!");
     qDebug() << strVec;
+
+    QList<int>::const_iterator iter = std::find(list1.begin(), list1.end(), 668);
+    if(iter != list1.end())
+        qDebug() << "Found: " << *iter;
+    else {
+        qDebug() << "Nope, didn't find anything. :(";
+    }
 }
 
 MainWindow::~MainWindow()
