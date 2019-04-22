@@ -122,6 +122,11 @@ MainWindow::MainWindow(QWidget *parent) :
     qDebug() << strList;
     std::sort(strList.begin(), strList.end(), caseInsensitiveLessThan);
     qDebug() << strList;
+
+    QVector<QString> strVec(3);
+    std::copy(strList.begin() + 1, strList.end(), strVec.begin() + 1);
+    foreach(const QString &str, strVec)
+        qDebug() << str;
 }
 
 MainWindow::~MainWindow()
