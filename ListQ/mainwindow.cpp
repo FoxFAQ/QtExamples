@@ -1,6 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+bool caseInsensitiveLessThan(const QString &s1, const QString &s2)
+  {
+      return s1.toLower() < s2.toLower();
+  }
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -89,7 +94,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMultiHash<QString, int> nameIdHash;
 
     QStringList strList;
-    strList << "sun " << "is " << "shining!";
+    strList << "Sun " << "iS " << "shINIng!";
     qDebug() << strList;
     foreach(const QString &str, strList)
         qDebug() << str;
@@ -105,6 +110,18 @@ MainWindow::MainWindow(QWidget *parent) :
     QSet<QString> stringSet;
     stringSet << "one" << "two" << "three";
     qDebug() << stringSet;
+
+
+    QList<int> list1;
+    list1 << 33 << 12 << 68 << 6 << 12;
+    std::sort(list1.begin() + 1, list1.end() - 1);
+    qDebug() << list1;
+    std::sort(list1.begin() + 1, list1.end() - 1, std::greater<int>());
+    qDebug() << list1;
+
+    qDebug() << strList;
+    std::sort(strList.begin(), strList.end(), caseInsensitiveLessThan);
+    qDebug() << strList;
 }
 
 MainWindow::~MainWindow()
