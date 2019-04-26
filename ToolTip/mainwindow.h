@@ -2,12 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QList>
-#include <QListIterator>
-#include <QMutableListIterator>
-#include <QDebug>
-#include <QLinkedList>
-#include <QHash>
 
 namespace Ui {
 class MainWindow;

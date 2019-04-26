@@ -6,52 +6,51 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>683</width>
-    <height>508</height>
+    <width>607</width>
+    <height>456</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>10</y>
-      <width>256</width>
-      <height>192</height>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QTableView" name="tableView_2">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>10</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
+    <property name="text">
+     <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>220</y>
-      <width>256</width>
-      <height>192</height>
+      <x>20</x>
+      <y>90</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>230</y>
-      <width>241</width>
-      <height>22</height>
+      <x>20</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
     </property>
    </widget>
   </widget>
@@ -60,7 +59,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>683</width>
+     <width>607</width>
      <height>21</height>
     </rect>
    </property>
