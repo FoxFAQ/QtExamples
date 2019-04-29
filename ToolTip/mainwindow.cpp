@@ -17,9 +17,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_2->setToolTip("<img src='qrc:/tooltip/1.jpg'> Hello <font color='red' size='11'><b>World</b></font>");
 
     ui->pushButton_3->setToolTip("<img src=':/tooltip/1.png'> Hello <font color='red' size='11'><b>World</b></font>");
+
+//    ui->pushButton->setWhatsThis("<a href=google.com>click</a>");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    Dial dial(this);
+    dial.exec();
 }
