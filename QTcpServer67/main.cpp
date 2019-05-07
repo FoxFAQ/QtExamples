@@ -1,12 +1,11 @@
 #include <QCoreApplication>
-#include "tcpsock.h"
+#include "qtcpserv.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    TcpSock sock;
-    sock.connectSock();
+    QTcpServ tcpServ;
 
     return a.exec();
 }
