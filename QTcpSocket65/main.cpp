@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     TcpSock sock;
-    sock.connect();
+    sock.connectSock();
 
     return a.exec();
 }

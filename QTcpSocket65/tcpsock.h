@@ -11,10 +11,15 @@ class TcpSock : public QObject
 public:
     explicit TcpSock(QObject *parent = nullptr);
 
-    void connect();
+    void connectSock();
 signals:
 
 public slots:
+    void connected();
+    void disconnected();
+    void bytesWritten(qint64 bytes);
+    void readyRead();
+
 private:
     QTcpSocket *socket = nullptr;
 };

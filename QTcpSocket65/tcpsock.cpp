@@ -5,28 +5,41 @@ TcpSock::TcpSock(QObject *parent) : QObject(parent)
 
 }
 
-void TcpSock::connect()
+void TcpSock::connectSock()
 {
     socket = new QTcpSocket(this);
 
+    connect(socket, &QTcpSocket::connected, this, &TcpSock::connected);
+    connect(socket, &QTcpSocket::disconnected, this, &TcpSock::disconnected);
+    connect(socket, &QTcpSocket::readyRead, this, &TcpSock::readyRead);
+    connect(socket, &QTcpSocket::bytesWritten, this, &TcpSock::bytesWritten);
+
     socket->connectToHost("google.com", 80);
 
-    if(socket->waitForConnected(3000))
+    if(!socket->waitForConnected(3000))
     {
-        qDebug() << "Connected!";
-
-        socket->write("Hello server/r/n");
-
-        socket->waitForBytesWritten(1000);
-        socket->waitForReadyRead(3000);
-
-        qDebug() << "Reading: " << socket->bytesAvailable();
-
-        qDebug() << socket->readAll();
-
-        socket->close();
+        qDebug() << "Not connected!" << socket->errorString();
     }
-    else {
-        qDebug() << "Not connected!";
-    }
+}
+
+void TcpSock::connected()
+{
+    qDebug() << Q_FUNC_INFO;
+
+    socket->write("Hello server/r/n");
+}
+
+void TcpSock::disconnected()
+{
+    qDebug() << Q_FUNC_INFO;
+}
+
+void TcpSock::bytesWritten(qint64 bytes)
+{
+    qDebug() << Q_FUNC_INFO << bytes;
+}
+
+void TcpSock::readyRead()
+{
+    qDebug() << Q_FUNC_INFO << socket->readAll();
 }
