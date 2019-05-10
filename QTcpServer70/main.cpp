@@ -1,11 +1,13 @@
 #include <QCoreApplication>
-#include "qtcpserv.h"
+#include "tcpserv.h"
+
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QTcpServ tcpServ;
+    TcpServ tcpServ;
+    tcpServ.startServer();
 
     return a.exec();
 }
