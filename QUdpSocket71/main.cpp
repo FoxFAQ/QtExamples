@@ -1,13 +1,13 @@
 #include <QCoreApplication>
-#include "tcpserv.h"
-
+#include "myudp.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    TcpServ tcpServ;
-    tcpServ.startServer();
+    MyUdp myUdpServer;
+    MyUdp myUdpClient;
+    myUdpClient.sayHello();
 
     return a.exec();
 }
