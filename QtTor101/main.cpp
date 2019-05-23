@@ -1,12 +1,12 @@
 #include <QCoreApplication>
-#include "dll97.h"
+#include "proxytest.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    DLL97 dll97;
-    dll97.test();
+    ProxyTest proxyTest;
+    proxyTest.getUrl();
 
     return a.exec();
 }
