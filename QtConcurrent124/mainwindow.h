@@ -18,6 +18,8 @@ public:
 
     static QString changeString(QString str);
 
+    static bool doFilter(const QString str);
+
 private slots:
     void on_pushButton_clicked();
 

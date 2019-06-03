@@ -19,16 +19,24 @@ QString MainWindow::changeString(QString str)
     return str;
 }
 
+bool MainWindow::doFilter(const QString str)
+{
+    if(str.toLower() == "one")
+        return false;
+    return true;
+}
+
 void MainWindow::on_pushButton_clicked()
 {
     ui->listWidget->clear();
     ui->listWidget_2->clear();
 
     QStringList itemsBefore;
-    itemsBefore << "1" << "2" << "3";
+    itemsBefore << "One" << "Two" << "Three";
     ui->listWidget->addItems(itemsBefore);
 
-    QStringList itemsAfter = QtConcurrent::blockingMapped(itemsBefore, &MainWindow::changeString);
+//    QStringList itemsAfter = QtConcurrent::blockingMapped(itemsBefore, &MainWindow::changeString);
 
+    QStringList itemsAfter = QtConcurrent::blockingFiltered(itemsBefore, &MainWindow::doFilter);
     ui->listWidget_2->addItems(itemsAfter);
 }
