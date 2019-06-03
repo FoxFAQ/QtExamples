@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-06-03T21:39:39
+# Project created by QtCreator 2019-06-03T23:25:17
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QtConcurrentBlockingMap123
+TARGET = QtConcurrent124
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use

@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QDebug>
 #include <QtConcurrent>
 
 namespace Ui {
@@ -17,7 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    static int getNumber(int &baseNumber);
+    static QString changeString(QString str);
 
 private slots:
     void on_pushButton_clicked();
