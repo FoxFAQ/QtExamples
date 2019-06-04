@@ -20,6 +20,8 @@ public:
 
     static bool doFilter(const QString str);
 
+    static void doReduce(QString &result, const QString item);
+
 private slots:
     void on_pushButton_clicked();
 

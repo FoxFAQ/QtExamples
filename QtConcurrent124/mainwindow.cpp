@@ -26,6 +26,11 @@ bool MainWindow::doFilter(const QString str)
     return true;
 }
 
+void MainWindow::doReduce(QString &result, const QString item)
+{
+    result += item + ", ";
+}
+
 void MainWindow::on_pushButton_clicked()
 {
     ui->listWidget->clear();
@@ -39,4 +44,12 @@ void MainWindow::on_pushButton_clicked()
 
     QStringList itemsAfter = QtConcurrent::blockingFiltered(itemsBefore, &MainWindow::doFilter);
     ui->listWidget_2->addItems(itemsAfter);
+
+    QFuture<QString> reduced = QtConcurrent::filteredReduced(itemsBefore, &MainWindow::doFilter, &MainWindow::doReduce);
+    reduced.waitForFinished();
+
+    QString result = reduced.result();
+    result.chop(2);
+
+    ui->lineEdit->setText(result);
 }
