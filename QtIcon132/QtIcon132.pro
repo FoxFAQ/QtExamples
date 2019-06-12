@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-06-11T23:58:13
+# Project created by QtCreator 2019-06-12T22:09:45
 #
 #-------------------------------------------------
 
-QT       += core gui concurrent
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QFutureWatcher
+TARGET = QtIcon132
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -23,6 +23,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
+
+RC_FILE = icon.rc
 
 SOURCES += \
         main.cpp \
